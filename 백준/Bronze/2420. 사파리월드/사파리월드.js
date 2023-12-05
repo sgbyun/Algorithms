@@ -1,0 +1,12 @@
+const input = require("fs")
+  .readFileSync(process.platform == "linux" ? "dev/stdin" : "boj/test/test.txt")
+  .toString()
+  .trim()
+  .split("\n");
+
+const [a, b] = input[0].split(" ").map(Number);
+if (a > b) {
+  console.log(a - b);
+} else if (a < b) {
+  console.log(b - a);
+}
