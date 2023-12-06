@@ -6,6 +6,7 @@ const input = require("fs")
 
 const [a] = input[0].split(" ");
 let first = [];
+let ans = "";
 for (let i = 0; i <= 25; i++) {
   first[i] = -1;
 }
@@ -16,5 +17,6 @@ for (let j = 0; j < a.length; j++) {
   }
 }
 for (let k = 0; k <= 25; k++) {
-  process.stdout.write(first[k] + " ");
+  ans += first[k] + " ";
 }
+console.log(ans);
